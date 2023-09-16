@@ -1,7 +1,5 @@
-# Open and inexpensive DIY SmartLock based on
+# Open and inexpensive DIY SmartLock based on Pico W module
 [![Discord](https://img.shields.io/discord/1024641213363671040?logo=discord&type=social)](https://discord.gg/qQ6NpHG57t)
-
-
 
 A simple solution for a simple, yet complex problem of home security: locking doors. This project helps you to create
 your own extension of classic mechanical door lock. You can change you usual lock into smart lock controlled with 
@@ -17,6 +15,8 @@ or reliability you may want for your project.
 If you want to chat with us, suggest improvement or stay informed, join to the [Discord community chat](https://discord.gg/qQ6NpHG57t).
 
 # Features
+* Micropython based [prototype](locks/pico)
+* BLE communication
 * More to be added. Stay tuned
 
 # Plans for development (not ordered)

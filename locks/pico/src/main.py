@@ -58,6 +58,8 @@ async def main():
     ble_service = asyncio.create_task(run_ble_service())
     await asyncio.gather(ble_service)
 
+def start():
+    asyncio.run(main())
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    start()

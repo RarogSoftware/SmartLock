@@ -1,3 +1,6 @@
+# test dependencies
 coverage
-unittest
 mock
+
+# other tools
+mpremote

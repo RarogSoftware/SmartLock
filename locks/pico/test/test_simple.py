@@ -1,5 +1,6 @@
 import unittest
 
+import src.main
 
 class MyTestCase(unittest.TestCase):
     def test_something(self):
