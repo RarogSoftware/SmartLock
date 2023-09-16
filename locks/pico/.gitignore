@@ -1,2 +1,13 @@
+# Local mapping for micropython
 .micropython/
+
+# python cache
+__pycache__/
+
+# coverage files
+htmlcov/
+.coverage
+
+#EasyEDA files
 *:Zone.Identifier
+

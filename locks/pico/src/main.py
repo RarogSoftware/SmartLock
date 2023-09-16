@@ -1,10 +1,8 @@
-from micropython import const
-import aioble
 import asyncio
-import bluetooth
 
-import random
-import struct
+import aioble
+import bluetooth
+from micropython import const
 
 _CURRENT_API = const("0.0")
 # lock service/namespace
@@ -61,4 +59,5 @@ async def main():
     await asyncio.gather(ble_service)
 
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
