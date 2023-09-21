@@ -9,7 +9,6 @@
 
 import unittest
 
-import test.conditions
 from test.mock import Mock, Matchers
 
 
@@ -160,9 +159,9 @@ class TestMockThatWorkWithMicropython(unittest.TestCase):
         self.assertEqual(returnValue, value)
 
         with self.assertRaises(AssertionError):
-            mock.verify().method().called().notAtAll()
-        mock.verify().method().called().once()
-        mock.verify().method(1, "arg", kwarg=4).called().once()
+            mock.verify().method().called().once()
+        mock.verify().method().called().notAtAll()
+        mock.verify().method("arg", kwarg=4).called().once()
 
     def test_dirContainsMockedMethods(self):
         mock = Mock()
@@ -172,14 +171,6 @@ class TestMockThatWorkWithMicropython(unittest.TestCase):
 
         self.assertTrue("method" in dir(mock))
         self.assertTrue("method2" in dir(mock))
-
-    @test.conditions.pc_only()
-    def test_appearAsType(self):
-        mock = Mock(mockClass=unittest.TestCase)
-
-        print(type(mock))
-        print(issubclass(type(mock), unittest.TestCase))
-        self.assertTrue(issubclass(type(mock), unittest.TestCase))
 
     def test_assertsForNonExistingValues(self):
         mock = Mock()

@@ -30,7 +30,7 @@ class RTC:
     def disableIrq(self):
         raise NotImplemented()
 
-    def getAvailableIrqFrequency(self) -> list[int]:
+    def getAvailableIrqFrequencies(self) -> list[int]:
         raise NotImplemented()
 
     def setIrqFrequency(self, value: int):

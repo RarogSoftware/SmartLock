@@ -134,7 +134,7 @@ class MockAsserts:
                         break
                 if not matched:
                     continue
-            matches.append((args, kwargs))
+                matches.append((args, kwargs))
 
         return MockMethodAsserts(self._mockName, matches)
 

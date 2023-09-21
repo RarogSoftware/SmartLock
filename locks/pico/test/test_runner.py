@@ -50,7 +50,7 @@ def run_tests():
             if file_name in ("..", ".", "__pycache__"):
                 continue
             elif file_type == _DIR_TYPE:
-                _load_directory(
+                result = result + _load_directory(
                     directory=directory + "/" + file_name,
                     pattern=pattern,
                     project_dir=project_dir,
@@ -70,6 +70,8 @@ def run_tests():
         project_dir=directory.parent.absolute()
     )
 
+    print(
+        f"Run tests: {result.testsRun} failures: {result.failuresNum} errors: {result.errorsNum} skipped: {result.skippedNum}")
     print(f'Memory stats: alloc: {gc.mem_alloc()} free: {gc.mem_free()}')
 
     sys.exit(result.failuresNum + result.errorsNum)

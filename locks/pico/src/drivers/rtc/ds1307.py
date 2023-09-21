@@ -78,7 +78,7 @@ class DS1307(RTC):
         )
 
     def setUnixTime(self, seconds: int):
-        self.setTime(time.localtime(seconds))
+        self.setTime(time.gmtime(seconds))
 
     def setTime(self, date):
         (year, month, day, hour, minute, second, weekday, *_) = date
@@ -119,7 +119,7 @@ class DS1307(RTC):
         self._i2c.writeto_mem(DS1307_ADDRESS, DS1307_CONTROL_ADDRESS, bytearray([value]))
         self._i2c.stop()
 
-    def getAvailableIrqFrequency(self) -> list[int]:
+    def getAvailableIrqFrequencies(self) -> list[int]:
         return [1, 4_096, 8_192, 32_768]
 
     def setIrqFrequency(self, value: int):

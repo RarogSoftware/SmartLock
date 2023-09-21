@@ -13,6 +13,9 @@ class MockMethodConfig:
     def __init__(self, appendFunction):
         self._function = appendFunction
 
+    def thenDoNothing(self):
+        self._function(lambda *args, **kwargs: None)
+
     def thenReturn(self, value):
         self._function(lambda *args, **kwargs: value)
 

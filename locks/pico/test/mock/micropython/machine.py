@@ -18,4 +18,6 @@ class RTC:
             (year, month, day, weekday, hour, minute, second, *_) = datetime
             unix = time.mktime((year, month, day, hour, minute, second, weekday, -1, 0))
             self._offset = time.mktime(time.localtime()) - unix
-        return time.localtime(time.mktime(time.localtime()) - self._offset)
+        (year, month, day, hour, minute, second, weekday, *_) = time.localtime(
+            time.mktime(time.localtime()) - self._offset)
+        return (year, month, day, weekday, hour, minute, second, 0)

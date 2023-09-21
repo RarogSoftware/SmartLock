@@ -15,6 +15,7 @@ class MockData:
     def __init__(self):
         self.deepMock = False
         self.mockName = ""
+        self.mockedClass = None
         self.deepMockReturnedMock = None
         self.defaultReturnFunction = None
         self.argumentMatchedReturnFunctions = []
@@ -52,9 +53,6 @@ class Mock:
         if deepMock:
             self._mock_.defaultReturnFunction = self._mock_.deepMockReturnFunction
         if mockClass is not None:
-            # this do not work on micropython :shrug:
-            cls = self.__class__
-            self.__class__ = cls.__class__(cls.__name__ + "Of" + mockClass.__name__, (cls, mockClass), {})
             currentDir = dir(type(self))
             for method in dir(mockClass):
                 if method not in currentDir:
