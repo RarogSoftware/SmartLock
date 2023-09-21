@@ -4,3 +4,4 @@ mock
 
 # other tools
 mpremote
+micropython-rp2-pico-w-stubs
