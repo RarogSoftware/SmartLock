@@ -8,10 +8,13 @@
 # ------------------------------------------------------------------------------
 
 import asyncio
+from asyncio import TimeoutError
 
 import aioble
 import bluetooth
 from micropython import const
+
+from clock import Clock
 
 _CURRENT_API = const("0.0")
 # lock service/namespace
@@ -28,9 +31,12 @@ _ADV_APPEARANCE = const(576)
 # How frequently to send advertising beacons.
 _ADV_INTERVAL_MS = 550_000
 
+clock = Clock()
+
 # Register GATT server.
 lock_service = aioble.Service(_LOCK_SERVICE_UUID)
-lock_state = aioble.Characteristic(lock_service, _LOCK_STATE_UUID, read=True, notify=True, initial="UNKNOWN")
+lock_state = aioble.Characteristic(lock_service, _LOCK_STATE_UUID, read=True, notify=True,
+                                   initial=f"{clock.getIsoTime()} INITIALIZING")
 lock_api = aioble.Characteristic(lock_service, _LOCK_STATE_UUID, read=True, initial=_CURRENT_API)
 lock_command = aioble.Characteristic(lock_service, _LOCK_COMMAND_UUID, write=True, capture=True)
 aioble.register_services(lock_service)
@@ -60,7 +66,7 @@ async def run_ble_service():
         except KeyboardInterrupt:
             break
         except Exception as error:
-            print("Error in BLE connection handling: " + error)
+            print("Error in BLE connection handling: " + str(error))
 
 
 async def main():
@@ -68,7 +74,9 @@ async def main():
     await asyncio.gather(ble_service)
 
 def start():
+    print("Start")
     asyncio.run(main())
 
 if __name__ == "__main__":
+    print("Main")
     start()
