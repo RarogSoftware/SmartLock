@@ -28,7 +28,6 @@ _LOCK_COMMAND_UUID = bluetooth.UUID("1007179b-8749-5c02-ae48-7fdc43307ef8")
 # org.bluetooth.characteristic.gap.appearance.xml
 _ADV_APPEARANCE = const(576)
 
-# How frequently to send advertising beacons.
 _ADV_INTERVAL_MS = 550_000
 
 clock = Clock()
