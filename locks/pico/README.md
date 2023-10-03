@@ -86,27 +86,24 @@ Please note that running test directly on Pico device will be much slower and wi
 * 1x [Raspberry Pico W](https://botland.store/raspberry-pi-pico-modules-and-kits/21575-raspberry-pi-pico-wh-rp2040-arm-cortex-m0-cyw43439-wifi-with-headers-5056561800196.html) ~9 EUR
 * 1x [DC connector 5,5x2,1mm](https://botland.store/protoboard-connector-board-accessories/9419-module-with-dc-55x21mm-socket-led-5904422313296.html) ~1 EUR
 * 1x [Power supply 5V/3A](https://botland.store/socket-power-supply/7160-power-supply-5v-3a-dc-55-21mm-5902135147627.html) ~6 EUR
-* 1x [3.3V DS1307](https://botland.store/grove-converters/13332-grove-ds1307-real-time-clock-i2c-5903351246729.html) ~
-  6.50 EUR
-  (
-  or [5V DS1307](https://botland.store/rtc-modules/12507-rtc-ds1307-32kb-eeprom-24c32-i2c-real-time-clock-with-memory-5904422341121.html)
-  ² ~1.50 EUR)
-*
-1x [Breadboard + jumper wires](https://botland.store/breadoards/1504-set-of-breadboard-830-140-jumper-wires-5904422303556.html)
-¹ ~9 EUR
-*
-1x [8-channel bi-directional logic level converter](https://botland.store/voltage-converters/8590-8-channel-bi-directional-logic-level-converter-5904422336660.html)
-² ~3 EUR
+* 1x [3.3V DS1307](https://botland.store/grove-converters/13332-grove-ds1307-real-time-clock-i2c-5903351246729.html) ~6.50 EUR (or [5V DS1307](https://botland.store/rtc-modules/12507-rtc-ds1307-32kb-eeprom-24c32-i2c-real-time-clock-with-memory-5904422341121.html)² ~1.50 EUR)
+* 1x [1.5Nm Servo](https://botland.store/servo-continuous-360-operation/21965-sc15-17kg-serial-bus-servo-uart-servo-waveshare-21568.html) ~21.50 EUR
+* 1x [Reed switch](https://botland.store/magnetic-sensors/9465-reed-switch-normally-plastic-145mm-5904422353230.html) ~1.50 EUR
+* 1x [Reflectance sensor](https://botland.store/sensors-odbiciowe/918-reflectance-sensor-ktir0711s-5904422351410.html) ~1.90 EUR
+* 1x [Magnet for reed switch](https://botland.store/neodymium-magnets/5723-round-neodymium-magnet-10x4mm-5pcs-5904257850119.html) ~2.50 EUR
+* 1x [Passive elements pack](https://botland.store/protoboard-connector-board-accessories/11726-set-of-passive-electronic-components-organizer-5903351240246.html)³ ~9 EUR
+* 1x [Breadboard + jumper wires](https://botland.store/breadoards/1504-set-of-breadboard-830-140-jumper-wires-5904422303556.html)¹ ~9 EUR
+* 1x [8-channel bi-directional logic level converter](https://botland.store/voltage-converters/8590-8-channel-bi-directional-logic-level-converter-5904422336660.html)² ~3 EUR
 
 Estimated prices: <br>
-Only 3.3V parts: ~22.50 EUR (~31.50 EUR¹)<br>
-Mixed 3.3V and 5V with logic level converter: ~20.50 EUR (~29.50 EUR¹) <br>
+Only 3.3V parts: ~59.00 EUR (~68.00 EUR¹)<br>
+Mixed 3.3V and 5V with logic level converter: ~57.00 EUR (~66.00 EUR¹) <br>
 
 ¹ Optional components <br>
 ² It is not recommended to connect 5V directly to GPIO pins on Pico,
-but [it works](https://hackaday.com/2023/04/05/rp2040-and-5v-logic-best-friends-this-fx9000p-confirms/). It is better to
-add logic level
-converter to mix 3.3V logic and 5V logic components.
+but [it works](https://hackaday.com/2023/04/05/rp2040-and-5v-logic-best-friends-this-fx9000p-confirms/). It is better to add logic level converter to mix 3.3V logic and 5V logic components. <br>
+³ It is matter of few elements, but buying pack is cheaper and more fail-proof. So if we want count only elements used,
+we can deduce ~8 EUR from total.
 
 We used [Botland store](https://botland.store/)
 as prices source, as it one of more known stores in Europe. You may find components more pricey depending on country you buy
